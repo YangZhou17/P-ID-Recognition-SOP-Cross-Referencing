@@ -1,6 +1,6 @@
 # P&ID Recognition and SOP Cross Referencing
 
-This project provides an automated pipeline for processing Piping & Instrumentation Diagrams (P&IDs) PDFs. It converts PDFs into high-resolution images, extracts text boxes using OCR, compares extracted numerical values (e.g., PSIG and Temperature) against standard limits defined in an Standard Operating Procedure (SOP) document, and then annotates the images to highlight discrepancies.
+This project provides an automated pipeline for processing Piping & Instrumentation Diagrams (P&IDs) PDFs. It converts PDFs into high-resolution images, extracts text boxes using OCR, compares extracted numerical values (e.g., PSIG and Temperature) against standard limits defined in a Standard Operating Procedure (SOP) document, and then annotates the images to highlight discrepancies.
 
 ---
 
@@ -95,10 +95,12 @@ diagram-analysis/
 
 ## Possible Improvements
 
-- **Better Lauout Analysis:**
-  Locating components locations by grouping tesseract's text boxes can be improved by traning a YOLO model.
+- **Better Layout Analysis:**
+  Locating component locations by grouping Tesseract's text boxes can be improved by training a YOLO model.
 
 - **Graph Construction:**
   Thoughts are to connect modules based on horizontal/vertical alignment if can achieve higher component recognition quality.
 
+- **Limit Mapping:**
+  Mapping logic will be improved if can achieve higher component recognition quality.
 ---
