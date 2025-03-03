@@ -4,6 +4,7 @@ from check_discrepancy import process_boxes_and_draw
 from extract_text_box import extract_boxes_from_image
 import json
 import os
+import sys
 
 def main(diagram_file_path, sop_file_path):
     '''
@@ -32,4 +33,10 @@ def main(diagram_file_path, sop_file_path):
         print(f"Process Finished For '{img_path}'.")
 
 if __name__ == "__main__":
-    main("./data/p&id/diagram.pdf", "./data/sop/sop.docx")
+    # Ensure two command-line arguments are provided.
+    if len(sys.argv) != 3:
+        print("Usage: python3 main.py <diagram_pdf_path> <sop_docx_path>")
+        sys.exit(1)
+    diagram_file_path = sys.argv[1]
+    sop_file_path = sys.argv[2]
+    main(diagram_file_path, sop_file_path)

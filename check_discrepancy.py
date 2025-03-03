@@ -44,9 +44,8 @@ def process_boxes_and_draw(limit_mapping, boxes, original_image_path, header_y_c
         raise IOError(f"Could not open or find the image '{original_image_path}'.")
 
     # Scale up the image for better OCR quality.
-    scale_percent = 400
-    width = int(image.shape[1] * scale_percent / 100)
-    height = int(image.shape[0] * scale_percent / 100)
+    width = int(image.shape[1] * SCALE_FACTOR)
+    height = int(image.shape[0] * SCALE_FACTOR)
     drawn_img = cv2.resize(image, (width, height), interpolation=cv2.INTER_CUBIC)
 
     # Separate header boxes (above cutoff and non-numeric) from diagram boxes.

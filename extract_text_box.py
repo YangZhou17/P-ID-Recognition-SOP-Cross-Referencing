@@ -101,9 +101,8 @@ def extract_boxes_from_image(image_path):
         raise IOError(f"Could not open or find the image '{image_path}'.")
 
     # Resize the image for better OCR results.
-    scale_percent = 400
-    width = int(image.shape[1] * scale_percent / 100)
-    height = int(image.shape[0] * scale_percent / 100)
+    width = int(image.shape[1] * SCALE_FACTOR)
+    height = int(image.shape[0] * SCALE_FACTOR)
     resized = cv2.resize(image, (width, height), interpolation=cv2.INTER_CUBIC)
 
     # Convert image to grayscale.

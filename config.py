@@ -6,6 +6,7 @@ MIN_BLOCK_DISTANCE = 10         # Minimum distance for merging boxes.
 BOX_PADDING = 7                 # Extra padding around boxes during OCR.
 MIN_HEIGHT_DIFF = 7             # Maximum height difference determining if boxes are on the same line.
 MIN_HORI_DIFF_SAME_HEIGHT = 90  # Horizontal difference threshold for same-line boxes.
+SCALE_FACTOR = 4                # Image Scaling factor to improve OCR quality
 
 # OCR configuration for locating text blocks
 FIRST_CONFIG = r'--oem 3 --psm 6'
