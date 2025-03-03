@@ -1,4 +1,4 @@
-# Diagram Analysis and Discrepancy Checker
+# P&ID Recognition and SOP Cross Referencing
 
 This project provides an automated pipeline for processing Piping & Instrumentation Diagrams (P&IDs) PDFs. It converts PDFs into high-resolution images, extracts text boxes using OCR, compares extracted numerical values (e.g., PSIG and Temperature) against standard limits defined in an Standard Operating Procedure (SOP) document, and then annotates the images to highlight discrepancies.
 
